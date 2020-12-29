@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.image-container {
+    display: block;
+    position: relative;
+}
+
+.image {
+    object-fit: cover;
+    position: absolute;
+    width: 100vw;
+    opacity: 1;
+}
+
+.image-right-in {
+    animation-name: ImageRightIn;
+    animation-duration:  2000ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes ImageRightIn {
+    0% {margin-left: 100%; opacity: 1}
+    40% {margin-left: 0%; opacity: 1}
+    100% {margin-left: 0%; opacity: 1}
+}
+
+.image-left-out {
+    animation-name: ImageLeftOut;
+    animation-duration: 2000ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes ImageLeftOut {
+    0% {margin-left: 0%; opacity: 1}
+    40% {margin-left: -100%; opacity: 1}
+    100% {margin-left: -100%; opacity: 1}
+}
+
+.image-left-in {
+    animation-name: ImageLeftIn;
+    animation-duration: 2000ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes ImageLeftIn {
+    0% {margin-left: -100%; opacity: 1}
+    40% {margin-left: 0%; opacity: 1}
+    100% {margin-left: 0%; opacity: 1}
+}
+
+.image-right-out {
+    animation-name: ImageRightOut;
+    animation-duration: 2000ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes ImageRightOut {
+    0% {margin-left: 0%; opacity: 1}
+    40% {margin-left: 100%; opacity: 1}
+    100% {margin-left: 100%; opacity: 1}
+}
+
+.serial-number {
+    color: rgb(255,255,255);
+    font-size: 12px;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    text-shadow: 1px 1px 2px rgba(100,100,100,.8);
+    top: 0;
+}
+
+.image-text {
+    bottom: 0px;
+    color: rgb(255,255,255);
+    /* color: rgb(0,0,0); */
+    font-size: 16px;
+    left: 50%;
+    position: absolute;
+    text-shadow: 1px 1px 2px rgba(100,100,100,.8);
+    transform: translate(-50%, -50%);
+}
+
+.fa.fa-angle-left {
+    color: rgb(255,255,255);
+    cursor: pointer;
+    font-size: 40px;
+    padding: 0 10px;
+    position: absolute;
+    text-shadow: 1px 1px 2px rgba(100,100,100,.8);
+    top: 50%;
+}
+
+.fa.fa-angle-left:hover {
+    background-color: rgba(100,100,100,.5);
+}
+
+.fa.fa-angle-right {
+    color: rgb(255,255,255);
+    cursor: pointer;
+    font-size: 40px;
+    padding: 0 10px;
+    position: absolute;
+    right: 0;
+    text-shadow: 1px 1px 2px rgba(100,100,100,.8);
+    top: 50%;
+}
+
+.fa.fa-angle-right:hover {
+    background-color: rgba(100,100,100,.5);
+}
+
+.circles {
+    display: flex;
+    justify-content: center;
+    padding: 10px 4px;
+    text-align:center;
+}
+
+.circle {
+    fill: rgb(210,210,210);
+    cursor: pointer;
+    height: 50px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px 4px;
+  }
+
+.active, .dot:hover {
+    background-color:  rgb(100,100,100);
+}
+
+.actual {
+    color: rgb(50,50,50);
+}
+
+.cannot-be-clicked {
+    pointer-events: none; 
+}
